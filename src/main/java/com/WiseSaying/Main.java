@@ -19,13 +19,31 @@ class App {
 
 
         System.out.println("== 명언 앱 ==");
-        System.out.print("명령 : ");
-        scanner.nextLine(); //입력값 가져옴. 입력값이 없으면 기다린다.
+        while (true) {
+            System.out.print("명령 : ");
+            String command= scanner.nextLine(); //입력값 가져옴. 입력값이 없으면 기다린다.
 
-        System.out.print("작가 : ");
-        scanner.nextLine();
 
-        System.out.println("1번 명언이 등록되었습니다.");
-        System.out.println("명령) 종료:");
+            if(command.equals("종료")) {
+                System.out.println("명령) 종료:");
+            }else if(command.equals("등록")){
+                System.out.print("명언 : ");
+                scanner.nextLine();
+
+                System.out.print("작가 : ");
+                scanner.nextLine();
+
+                System.out.println("1번 명언이 등록되었습니다.");
+            }
+
+
+
+            System.out.print("작가 : ");
+            scanner.nextLine();
+
+            System.out.println("1번 명언이 등록되었습니다.");
+
+        }
     }
+
 }
